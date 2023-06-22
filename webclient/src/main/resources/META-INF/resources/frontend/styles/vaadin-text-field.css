@@ -1,0 +1,19 @@
+:host([theme~="login-field"]) [part="input-field"] {
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+:host([theme~="login-field"]) [part="label"] {
+    color: var(--kuwaiba-secondary-text-color);
+    font-size: 1em;
+}
+
+:host([theme~="login-field"]) [part="input"]:hover [part="label"] {
+   color: var(--kuwaiba-secondary-text-color);
+   font-size: 1em;
+}
+
+:host([theme~="login-field"]) [focused][part="value"]:focus [part="label"]{
+   color: var(--kuwaiba-secondary-text-color); 
+   font-size: 1em;
+}

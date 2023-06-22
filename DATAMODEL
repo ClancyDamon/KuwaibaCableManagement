@@ -1,0 +1,226 @@
+0.2.1 - 0.3
+* There's a single root for all entity classes: RootObject
+* The former RootObject (parent of all classes to be listed within the inventory (This is equipment, services, etc) is now know as InventoryObject
+* The helper entity classes like metadata stuff, queries, views, etc have their own branch which roots are MedataObject and ApplicationObject
+* "Query" is subclass of ApplicationObject
+* "AirConditioning" goes to ConfigurationItem
+* "Slot" goes to ViewableObject
+* The "NoCount" annotation was added to decorate all those classes pertaining to the inventory, but that are not necessary to be "counted" (they don't have serial numbers or are actually assets), like Slots, Ports or City/Continent/State
+* StateObject was renamed to State
+* "GenericContainer" goes to ConfigurationItem
+* "AdministrativeItem" goes to InventoryObject
+* "parent" (attribute) is no longer a single long, but a reference to another InventoryObject in order to protect the data integrity
+* "serialNumber" (attribute) in ConfigurationItem is now decorated with NoCopy and Column.unique=true
+* "isAccountable"(attribute) in ClassMetadata was renamed to isCountable (this is directly related to the NoCount annotation)
+* "LockEntry" class was renamed to "Lock" and moved to the package entity.session (it was in entity.core.metamodel)
+* "Rack" and other classes in entity.equipment.containers share the same equipmentVendor available for the rest of the ConfiguratioItems (see change #10). It's a direct answer to the bug #3175024
+* Added height, width and depth to GenericContainer
+* Added class "Cabinet"
+* Added class "GenericAppliance"
+* Added class "Firewall"
+* Added class "NIDS"
+* Added class "TrafficAnalyzer"
+* Removed "releasedDate" (attribute) and added "version" (attribute) in OperatingSystem
+* Added class "NetworkService"
+* Added "services" (attribute) to Server
+* Removed classes SDHRate, GenericRate and IPRate
+* Changed the data type for "rate" (attribute) in SDHService and GenericHomeService
+* Removed the IPservice class
+* Added class "GigaEthernetService"
+* Added class "VoIPService"
+* Added class "CableDataService"
+* Added class "CableTVService"
+* Added class "MobileDataService"
+* Added class "FTTHService"
+* Added class "PDHService"
+* Added class "GenericCustomer"
+* HomeCustomer and CorporativeCustomer go to GenericCustomer
+* Added class "Contractor"
+* Moved "sla" and "ola" (attributes) from "GenericService" to "GenericCorporativeService"
+* "CorporativeService" renamed to "CorporateService"
+* Services were separated into two new packages entity.qos.services.corporate and entity.qos.services.home
+* Added "type" (attribute) to "Rack" (class) and "RackType" (class) added as well
+* Added "type" (attribute) to "DDF" and "ODF" (classes) and "DistributionFrameType" (class) added as well
+* "GenericPort" goes directly under InventoryObject
+* "GenericPowerPart" goes directly to InventoryObject
+* Added class "KVMSwitch"
+* Added class "Printer"
+* Added class "PrinterType"
+* "hasRaisedFloor" (attribute) added to Room
+* Added class "ComputerMonitorType"
+* "type" (attribute) added to Monitor class
+* Added class "TimeSource"
+* Added class "TimeSourceType"
+* Added "ATMMux" and "ATMBoard" classes
+* "DWDMBoard" and "SDHBoard" classes moved to entity.equipment.datalinklayer.parts.boards and IPBoard to entity.equipment.networklayer.parts.boards
+* "User" and "UserGroup" were move to entity.session and entity.config was removed
+* Added class "CableManager"
+* "MixedCard" renamed to "HybridCard"
+* Added class "PeripheralPort"
+* Added class "PeripheralPortType"
+* Added class "MouseType"
+* Added class "KeyboardType"
+* GenericObjectList goes to ApplicationObject
+* Added class "GenericType"
+* All types goes to GenericType (MouseType, XXPortype, etc)
+* Added class "NetworkPort"
+* GenericNetworkElements no longer have the attribute "ipAddress". It was sent to "NetworkPort"
+* Added class "MPLSSwitch"
+* All custom interfaces (PhysicalNode, PhysicalConnection, PhysicalContainers) were deleted since they can't be used with JPA (it's technically possible, but it doesn't make sense anymore)
+* Added "state" (attribute) to GenericPort
+
+0.3.1 - 0.4 alpha
+* Renamed class "Cabinet" to "IndoorsCabinet"
+* Added class "OutdoorsCabinet"
+* Added GenericMediaService
+* Added GenericDataService
+* Removed GenericHome/CorporateService
+* Added "GenericXDSLService"
+* Added "ADSLService"
+* Added "SDSLService"
+* Added "VDSLService"
+* Added "HostingService"
+* Added "HousingService"
+* Package "org.kuwaiba.entity.multiple.systems" renamed to "org.kuwaiba.entity.multiple.software"
+* Added "GenericSoftwareItem" as root of all software
+* Added class OpticalAmplifier
+* Moved class "GenericConnection" to InventoryObject
+* Added class "Wavelength"
+* Added class "TelecommunicationsOperator"
+* Added class "ONTBoard"
+* Added class "OpticalNetworkTerminal"
+* Added class "OpticalLineTerminal"
+* Added attribute "responsible" to class "GenericPhysicalElement"
+* Moved class "SpliceBox" to "GenericContainer"
+* Added class "FiberCassette"
+* Added class "FiberCassetteType"
+* Added class "DSLAM"
+* Added class "DSLAMBoard"
+* Added class "DSLAMType"
+* Added attributes "owner" and "operator" to GenericPhysicalConnection
+* Added class "GenericOrder"
+* Added class "WorkOrder"
+* Added class "CustomerOrder"
+* Added class "GenericAddress"
+* Added class "IPv4Address"
+* Added class "IPv6Address"
+* Added class "IPv4Subnet"
+* Added class "IPv6Subnet"
+* Added class "BurstableService"
+* Added class "FacilityType"
+* Added attribute "type" to class "Building"
+* Added class "OLTBoard"
+* Added class "Pole"
+* Added class "SatellitalMediaService"
+* Added class "SatellitalDataService"
+* Added attributes "bandwidth" and "rate" to class "GenericDataService"
+* Added class "RateType"
+* Added "IPTVService"
+* Added "FiberSplitter"
+* Added "FiberSplitterType"
+* Added attribute "directResources" to "GenericService"
+* Moved class Switch from org.kuwaiba.entity.equipment.datalinklayer to org.kuwaiba.entity.equipment.networklayer. It inherits from GenericNetworkElement now
+* Renamed class "SatellitalDataService" to "SateliteDataService"
+* Renamed class "SatellitalMediaService" to "SateliteMediaService"
+* Added attribute "sla" to GenericService
+* Created package org.kuwaiba.entity.connections.logical
+* Added class "Redirector" under "GenericAppliance"
+* Added class "GenericLogicalElement"
+* Added class "IPLink"
+* Added class "GenericLogicalConnection"
+* Added class "SDHLink"
+* Added class "AccessPoint"
+* Moved class "Switch" to the network layer
+* Added class GenericLogicalElement
+* Added class "VLAN"
+* Added class "VPN"
+* Moved attributes aEndpoint and bEndpoint from GenericPhysicalConnection to GenericConnection
+* Removed class "NetworkPort"
+* Moved class "VirtualPort" from "GenericPort" to "GenericCommunicationsPort"
+* Added class SONETLink
+* Renamed class "IPv4Address" to "IPAddress"
+* Added attribute "type" to "IPAddress"
+* Removed class IPv6Address
+* Removed class IPv6Subnet
+* Removed class IPv4Subnet
+* Added attribute "ASN" to "CorporateCustomer"
+* Added class "IPAddressType"
+* Renamed attribute "indisponibility" from "SLA" to "availability"
+* Removed attribute "sla" from "GenericService"
+* Added attribute "service" to class "SLA"
+* Added class "VirtualMachine"
+* Added class "VirtualMachineType"
+* "GenericSoftwareItem" turned into abstract
+* Added attribute "vendor" of type "Vendor" to the class "GenericSoftwareItem"
+* Added class "HardDisk"
+* Added class "HardDiskType"
+* Added attribute "services" to "Employee"
+* Added attribute "ports" to VLAN
+* Added class "HornAntenna"
+* Added class "DipoleAntenna"
+* Class "SatelliteAntenna" renamed to "ParabolicAntenna"
+* Added class "Lot"
+* Class "Antenna" renamed to "GenericAntenna" (abstract)
+* Removed attribute "edge" from "GenericAntenna" and added to "DipoleAntenna" and "ParabolicAntenna"
+* Added class "PolarizationType"
+* Class WorkStation renamed to "Workstation"
+* Added attribute "length" to class "GenericPhysicalContainer" and "GenericPhysicalLink"
+* Added class "CementJunctionBox"
+* Added class "House"
+* Added class "Zone"
+* Renamed class SoftwareAsset to GenericSoftwareAsset
+* Renamed class GenericSoftware to GenericSoftwareType
+* Added class SoftwareLicense
+* Added all classes related to the Mobile Networks model (see corresponding design document)
+* Added class Subnet
+* Added class Manhole
+
+0.6 - 0.7
+
+* Class "GenericCustomer" is no longer subclass of "GenericPerson" now is subclass of "AdminstrativeItem"
+* attribute *creationDate* added
+* IPAddress and Subnet no longer have the attribute "customer"
+
+1.0
+* Added class PowerLink
+* Added class PowerLinkType
+* Class GenericPhysicalLink does not have the attributes owner and operator anymore
+* Class SDHLink removed
+* Class SONETLink removed
+* Added classes GenericTransportLink, GenericContainerLink, GenericTributaryLink, GenericSDHTransportLink, 
+  GenericSDHContainerLink, GenericSDHTributaryLink, GenericSDHLowOrderContainerLink, GenericSDHHighOrderContainerLink, 
+  GenericSDHLowOrderTributaryLink, GenericSDHHighOrderTributaryLink, STM1, STM4, STM16, STM64, STM256, VC12, VC3, VC4, VC4-4, VC4-16, VC12TributaryLink, VC3TributaryLink, VC4TributaryLink
+* Added class EoSDHService, DIAService
+* Class IPService renamed to IPTransitService
+* New class GenericCommunicationsElement is now the parent of all other GenericXXXElement
+* Added class PortGroup
+* Added GenericSDHService
+* GenericSDHService is now the superclass of SDHService, EoSDHService and SONETService and PDHService
+* Added class GenericContract, now superclass of SLA, OLA and the new SupportContract
+* Added class SupportContract
+* VirtualMachine is now subclass of GenericSoftwareAsset
+* Added class MPLSLink
+
+2.1
+* Added class GenericContact
+* Added class GenericProject
+* Class GenericMPLSService is now abstract
+* Created class GenericVirtualElement
+* VirtualMachine class moved under GenericVirtualElement
+* Added class GenericNetworkFunction
+* Added class RoutingFunction
+* Added class GenericSplicingDevice
+* SpliceBox and FiberCassette moved under GenericSplicingDevice
+* Class Lambda removed, Wavelength should be used instead
+* Attributes longitude and latitude added to all classes under GenericPhysicalLocation
+* Created class GenericLastMileCircuit under GenericLogicalConnection
+* Created class Circuit under GenericLastMileCircuit
+* Created class Path GenericLastMileCircuit
+* Added attribute isManagementInterface to class GenericCommunicationsPort
+* Added class Manhole (again)
+* Added class GenericCorporateCustomer under GenericCustomer
+* TelecommunicationsOperator is now subclass of GenericCorporateCustomer
+* SubnetIPv4 SubnetIPv6 attribute ipAddress was removed, attribute mask was added
+* IP Address attribute isManagementAddress was renamed to isManagement
+* IP Address attribute isManagementAddress was removed
+* GenericCommunicationsPort attribute isManagement(boolean) was added

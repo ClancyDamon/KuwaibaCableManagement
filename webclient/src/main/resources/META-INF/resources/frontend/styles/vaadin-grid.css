@@ -1,0 +1,7 @@
+[part="row"] {
+    font-size: smaller;
+}
+
+[part~="row"]:hover [part~="body-cell"] {
+    background-color: var(--kuwaiba-color-light_yellow);
+}

@@ -1,0 +1,167 @@
+0.1 Beta
+* Fixed the support for abstract classes
+* Internationalization of server log messages
+* Corrections to the initialization script
+* Container Manager now uses Children.Array
+
+0.1 Stable
+* Added a List type attributes manager
+* Added a class manager to customize the icons and display names for available classes
+* Added an attribute manager to customize descriptions, visibility and display names for available attributes
+* Added many classes and attributes to the data model
+* More methods on the server side were migrated to used the Criteria API
+* New icons in the test db
+
+0.1.1
+* Added preliminar User/Groups management (You can create users and groups and relate them, but there's no privileges scheme yet)
+* The server and the client can reside in different computers.
+* More methods use now the Criteria API, and the updateObject method doesn't use native queries to avoid SQL Injection
+* Multiple bugfixes
+
+0.2 alpha
+* Added support for physical connections. A lot to polish, though
+
+0.2 beta
+* Support for physical connections complete
+* Webservice session support
+* A lot of minor fixes
+* Javadoc updated
+* Additions to the data model
+* Adapters are not longer used (see http://kuwaiba.sourceforge.net/blogs/?p=65)
+* Performance improvements
+
+0.2.1 Stable (23122010)
+* Support for user sessions
+* copyObjects method rewritten
+* Performance improvements
+* Several bugfixes
+
+0.3 Alpha (17012011)
+* Preliminary support for advanced queries
+* executeQuery method written using type-safe JPQL
+
+0.3 Beta2 (13032011)
+* Datamodel change (see DATAMODEL file for a full list of changes)
+* Changes in the executeQuery method
+* TestServlet renamed to Tools and enhanced to provide a way to reset the admin password and diagnose potential data model problems
+* The context path (WSDL location) was changed to /kuwaiba/<KuwaibaService?wsdl>
+
+0.3 Stable (16052011)
+* A few security fixes
+* Fixes to close the bug #3177812
+* Packages renamed to match the convention org.kuwaiba.xxx
+
+0.3.1 (24012012)
+* Minor bug fixes
+* Datamodel change (see DATAMODEL file for a full list of changes)
+* Added security check to getMetaData and getMetadataLight methods
+* Fixed a bug that made getMultipleChoice to return also the abstract list types
+
+0.4
+0.5.1 (12122013)
+* Added method getUpstreamContainmentHierarchy to the ws API
+* Added capabilities for searching objects by id and parent
+* Added methods getObjectRelatedViews and getGeneralViews to the webservice API
+* APIs use now primitive types (boolean, long, etc) instead of wrappers (Long, Boolean) to improve type safety
+* Added support to modify dynamically the data model
+* Added support to manipulate pools
+* Many performance and bugfixes
+
+0.6
+* Support for activity logs
+* Improved permissions support
+* Improvements to physical connections capabilities
+* Multiple bugfixes
+* Sessions are managed in the service
+
+0.7 (24072014)
+* Improved Service manager data model
+* Datamodel change 
+* Support for software assets
+* Lots of bugfixes
+* Preliminary support for bulk uploads
+
+0.7.1 (06112015)
+* The bulk upload file format was improved
+* Added method to allow the creation of multiple objects at once in the API
+
+1.0 (03112016)
+* The Persistence Service was merged to the web application
+* Service startup improved and logging level increased. 
+* Neo4J version changed to 2.3.2
+* Names of some web service methods changed. The types remain unchanged
+* The name of the web service class changed to KuwaibaService
+* JSF 2.2 is used now to support the administration console
+* Added isSubclassOf method to the web service API
+* Open session, close session, create user, delete users methods have now audit trail entries
+* The general views are no longer referenced by type (an integer), but by class name (it's more intuitive to know how to retrieved them)
+* The way the exceptions are raised and caught changed. It's all handled at webservice level
+* Added preliminary support for commercial modules
+* Webservice API improved and extended
+* HTTPS support now documented
+
+1.1 (01122016)
+* Added support for templates
+* Added support for user defined reports
+* Passwords are now stored using BCrypt instead of MD5 hashes
+* Hard-coded reports were partly migrated to work as dynamic ones
+* The general audit trail is returned from the newest to the oldest.
+
+1.1.1
+* When creating many connections at once, they're numbered 001, 002, 003,..., 095, 1000, 2000,... 
+
+1.5
+* The methods User Management was extended and some parts rewritten
+* Added a migration patch that moves all stand-alone users to a default group. Users can no loger not to belong to a group
+* Changed license from GPLv2 to GPLv3
+* Unique and mandatory attributes support was added
+* New Projects and Bookmarks modules added to the API
+* When creating  or updating new objects, the attribute values are now simple strings instead of lists of strings
+* Reporting API extended (Preliminary support for Google Charts and more HTML components)
+* Added convenience methods to the Persistence API
+* Preliminary version of the business rules API
+* Audit trail entries added to many methods
+
+1.6
+* It's possible to create sdh links that use concatenated containers. This way, the user can create sdh connections with arbitrary capacities to support services such as Ethernet/IP over SDH
+* Added support for the Inventory Synchronization framework
+* WS API extended with multiple utility methods (plus those related to particular features, like Device Layouts and Sync)
+* Multiple bugfixes and improvements
+* The Connection Wizzard shows if there are existing containers and allow the user to choose if the new links should be created inside a container.
+* It's now possible also move links out of a container choosing the links container from the object view.
+* It's now possible to move one or several links into a container from the object view. 
+* The tasks can now make commit if something is created in the task.
+
+2.0
+* New module to manage scripts to be used by other modules or tasks (Script Query Manager)
+* Added a Process Manager that allows to design processes using BPMN
+* Revamped web interface
+* More than one session for the same user can be created, as long as they have different types (for example a mobile session and a desktop session)
+* More Sync Providers added
+* Migration to Java 8, Neo4J 3.x and Vaadin 8.x
+* Added a preliminary Outside Plant module version
+* Service Manager partly ported to the web interface
+
+2.1
+* About 90% of functionality migrated to web. Process Manager, Synchronization Framework, IP Address Manager and SDH still to be migrated.
+* All migrated modules either provide the same desktop client functionality or improve it (Topology Manager, Rack View, Physical Tree) 
+* Server is now a Spring Boot Project, no a J2EE application.
+* Threading model changed.
+* Operations such as IP addressing space calculation, node geo-location loading and end-to-end views improved, performance-wise. 
+* Dependencies updated: Vaadin 14.4.x, Neo4J 3.5.5, Groovy 3.0.1
+* OSP module rewritten to widen the scope, now supporting splicing, mid-span access, multiple node paths, position synchronization, and much more.
+* Navigation module no longer revolves around the Nav Tree, but smart searches.
+* Filters capability added to the navigation module. The filters are scripted queries than return a set of elements contained inside, or 
+  related to, a given object. A use case is, instead of seeing all the direct children of an object (say a rack), make a filter to show only the
+  children with available resources (for example, ports without connections).
+* Modules involving custom scripts now provide Groovy syntax recognition in the script editor.
+* Several tasks and reports updated.
+* The concept of "Filters" as a way to improve the navigation by allowing the admin to create custom algorithms to explore the inventory through the containment 
+  hierarchy was introduced.
+* The concept of "Scripted Queries" as a way to create custom queries with parameters and direct access to the database was introduced.
+* Validators now support also fill colors and UNICODE emojis.
+* Synchronization Management only works on web.
+* Added a Proxy Manager module to help in integration scenarios when is necessary to group several inventory assets seen as one by an external 
+  application. A proxy acts as that group, and the external application will only have to inquire by the proxy, not the actual invetory objects. 
+* Several bug-fixes (see https://sourceforge.net/p/kuwaiba/bugs/search/?q=status%3Aclosed-duplicate+or+status%3Aclosed-wont-fix+or+status%3Aclosed-fixed+or+status%3Aclosed) and feature requests closed (see https://sourceforge.net/p/kuwaiba/feature-requests/search/?q=status%3Awont-fix+or+status%3Aclosed)
+* IPAM was migrated to web and added dashboards to better manage the information on display.

@@ -1,0 +1,100 @@
+/*
+@license
+Copyright 2010-2021 Neotropic SAS <contact@neotropic.co>.
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software 
+distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and 
+limitations under the License.
+*/
+/* 
+ * Author: hardy ryan chingal {@literal <ryan.chingal@kuwaiba.org>}
+*/
+
+.bold-font {
+    font-weight: bold;
+}
+
+.header {
+    margin: 0px;
+}
+
+.header-margin {
+    margin: 0px;
+    margin-top: 22px;
+}
+
+.header-validator {
+    margin-top: -20px;
+}
+
+.header-validator-properties {
+    margin-top: 0px;
+}
+
+.header-projects {
+    margin-top: -10px;
+}
+
+.search {
+    margin-top: -10px;
+}
+
+.button-action-position {
+    padding-left: 160px;
+}
+
+.button-main-action-position {
+    padding-left: 620px;
+    margin-top: 2px;
+}
+
+.button-pool-action-position {
+    padding-left: 470px;
+    margin-top: 2px;
+}
+
+.left-side{
+    padding: 0px 5px 0px 5px;
+}
+
+.left-action-buttons{    
+    width: 100%;
+}
+
+.left-action-buttons vaadin-text-field{    
+    padding-right: 10px
+}
+
+.right-side{    
+    background-color: var(--kuwaiba-secondary-text-color);
+}
+
+.button-container{
+    background-color: var(--kuwaiba-secondary-text-color);
+    padding-right: 10px;
+    width: 65%;
+}
+
+.button-container vaadin-button iron-icon{
+    color: var(--kuwaiba-primary-color-dark);
+}
+.script-control{
+    background-color: var(--kuwaiba-secondary-text-color);
+}
+.header-script-control{
+    background-color: var(--kuwaiba-secondary-text-color);
+}
+.script-editor{
+    background-color: var(--kuwaiba-secondary-text-color);    
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

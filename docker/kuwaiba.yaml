@@ -1,0 +1,9 @@
+services:
+  kuwaiba:
+    container_name: kuwaiba
+    image: neotropic/kuwaiba:v2.1-nightly
+    environment:
+      URL_DATA: https://sourceforge.net/projects/kuwaiba/files/Version%202.x/kuwaiba_server_2.1-dev_nightly.tar.gz
+    ports:
+      - "8080:8080"
+      - "8081:8081"

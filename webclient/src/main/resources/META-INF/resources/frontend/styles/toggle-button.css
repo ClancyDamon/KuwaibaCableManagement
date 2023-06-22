@@ -1,0 +1,20 @@
+paper-toggle-button.green {
+    --paper-toggle-button-checked-bar-color:  var(--paper-green-500);
+    --paper-toggle-button-checked-button-color:  #fafafa;
+    --paper-toggle-button-checked-ink-color: var(--paper-green-500);
+    --paper-toggle-button-unchecked-bar-color:  #969696;;
+    --paper-toggle-button-unchecked-button-color:  #fafafa;
+    --paper-toggle-button-unchecked-ink-color: var(--paper-teal-500);
+    font-size: var(--material-button-font-size);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+paper-toggle-button.pink {
+    --paper-toggle-button-checked-bar-color: yellow;
+    --paper-toggle-button-checked-button-color:  var(--paper-pink-500);
+    --paper-toggle-button-checked-ink-color: var(--paper-pink-500);
+    --paper-toggle-button-unchecked-bar-color:  var(--paper-indigo-900);
+    --paper-toggle-button-unchecked-button-color:  var(--paper-indigo-900);
+    --paper-toggle-button-unchecked-ink-color: var(--paper-indigo-900);
+}
+

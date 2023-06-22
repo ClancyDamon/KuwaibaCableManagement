@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neotropic.kuwaiba</groupId>
+        <artifactId>kuwaiba-server</artifactId>
+        <version>2.1</version>
+    </parent>
+    
+    <artifactId>northbound</artifactId>
+    <name>Northbound Interfaces</name>
+    <description>This module contains the default implementations of Kuwaiba's northbound interfaces, such as the SOAP-based webservice</description>
+    <packaging>jar</packaging>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        
+        <repository>
+            <id>Vaadin Directory</id>
+            <url>https://maven.vaadin.com/vaadin-addons</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+        <!-- Persistence API -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>reference-implementation</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.3.2-1</version>
+	</dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>internationalization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>sdh</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>physical-connections</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>whman</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>ipam</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>mpls</artifactId>
+            <version>2.1</version>
+        </dependency> 
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>planning</artifactId>
+            <version>2.1</version>
+        </dependency>    
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>synchronization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>business-analytics</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>serviceman</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>configuration</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>impact</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>contractman</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.13</version>
+        </dependency>
+    </dependencies>
+    
+</project>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neotropic.kuwaiba</groupId>
+        <artifactId>commercial</artifactId>
+        <version>2.1</version>
+    </parent>
+    
+    <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+    <artifactId>ospman</artifactId>
+    <version>2.1</version>
+    <name>Outside Plant Manager</name>
+    <description>Build geographically-aware view with your outside plant infrastructure</description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+    
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>navigation</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.flow.component</groupId>
+            <artifactId>paper-dialog-flow</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.flow.component</groupId>
+            <artifactId>gmaps-flow</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>physical-connections</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>integration-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.util</groupId>
+            <artifactId>visual</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neotropic.kuwaiba</groupId>
+            <artifactId>Visualization</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.kuwaiba.modules.commercial</groupId>
+            <artifactId>external-services</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.neotropic.flow.component</groupId>
+            <artifactId>olmap-flow</artifactId>
+        </dependency>
+    </dependencies>
+</project>

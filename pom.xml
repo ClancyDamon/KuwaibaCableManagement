@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.neotropic.kuwaiba</groupId>
+    <artifactId>kuwaiba-server</artifactId>
+    <version>2.1</version>
+    <packaging>pom</packaging>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+    </parent>
+    
+    <name>Kuwaiba Open Network Inventory Server</name>
+    <description>The first and only open source network inventory platform for the telecommunications business</description>
+    
+    <organization>
+        <name>Neotropic SAS</name>
+        <url>https://www.neotropic.co</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>EPLv1</name>
+            <url>Eclipse Public License - Version 1.0</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>GPLv3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <modules>
+        <module>core</module>
+        <module>webclient</module>
+        <module>optional</module>
+        <module>northbound</module>
+        <module>branding</module>
+        <module>util</module>
+        <module>commercial</module>
+    </modules>
+    <properties>
+        <vaadin.version>14.10.1</vaadin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencies>
+        <!-- Spring core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- coding helper-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+            <optional>true</optional>
+	</dependency>
+    </dependencies>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!-- Apache FreeMarker template engine to generate HTML output -->
+            <dependency>
+              <groupId>org.freemarker</groupId>
+              <artifactId>freemarker</artifactId>
+              <version>2.3.31</version>
+            </dependency>
+            <!-- In-house Vaadin 14 add-ons -->
+            <dependency>
+                <groupId>com.neotropic.flow.component</groupId>
+                <artifactId>ace-editor-flow</artifactId>
+                <version>1.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.neotropic.flow.component</groupId>
+                <artifactId>gmaps-flow</artifactId>
+                <version>1.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.neotropic.flow.component</groupId>
+                <artifactId>mx-graph-flow</artifactId>
+                <version>1.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.neotropic.flow.component</groupId>
+                <artifactId>paper-dialog-flow</artifactId>
+                <version>1.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.neotropic.flow.component</groupId>
+                <artifactId>gantt-chart-flow</artifactId>
+                <version>1.0</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.neotropic.flow.component</groupId>
+                <artifactId>olmap-flow</artifactId>
+                <version>0.1.0</version>
+            </dependency>
+            <!-- Vaadin directory components -->
+            <dependency>
+               <groupId>com.vaadin.componentfactory</groupId>
+               <artifactId>enhanced-dialog</artifactId>
+               <version>1.0.3</version>
+            </dependency>
+            <!-- Vaadin -->
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-spring-boot-starter</artifactId>
+                <version>${vaadin.version}</version>
+                <exclusions>
+                    <!-- Excluding so that webjars are not included. -->
+                    <exclusion>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>vaadin-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

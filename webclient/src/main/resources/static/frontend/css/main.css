@@ -1,0 +1,165 @@
+@font-face {
+    font-family: LieraSans-Light;
+    src: url('../fonts/LieraSans-Light.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+body {
+    /* Overrides the default material colors */
+    --primary-color: #07a0d2;
+    /* Customizing Lumo */
+    --lumo-font-family: 'LieraSans-Light', 'Roboto-Light' !important;
+    --lumo-primary-text-color:  #3f3d56 !important;
+    --lumo-primary-color: var(--primary-color) !important;
+    /* Custom palette */
+    --kuwaiba-primary-color: #07a0d2;
+    --kuwaiba-color-blue: #46739f;
+    --kuwaiba-primary-color-dark: #3f3d56;
+    --kuwaiba-color-grey: #838383;
+    --kuwaiba-secondary-color: #5bb327;
+    --kuwaiba-terciary-color: #ffd90a;
+    --kuwaiba-color-yellow: #fae352;
+    --kuwaiba-color-light_yellow: rgba(249, 255, 207, 0.5);
+    --kuwaiba-quintenary-color: #f04f47;
+    --kuwaiba-color-light_red:#fe9a9a;
+    --kuwaiba-primary-text-color: #3f3d56;
+    --kuwaiba-secondary-text-color: #ffffff;
+    
+    line-height: 1;
+    /* Vaadin icons size */
+    --iron-icon-width: 24px;
+    --iron-icon-height: 24px;
+    font-size: smaller;
+}
+
+/*main action button*/
+.nav-button {
+    background: var(--kuwaiba-primary-color);
+    color: var(--kuwaiba-secondary-text-color);
+}
+
+.login-background{
+    background: -webkit-radial-gradient( #4c81a1 30%, #336685, #1a4b69 90%);
+}
+
+.login-text {
+    color: var(--kuwaiba-secondary-text-color);
+    font-size: xx-small;
+}
+
+.h4 {
+    color: var(--kuwaiba-secondary-color);
+}
+
+/* To be used in regular links, preferably those in static-information-related pages, 
+   such as branding pages or help. */
+a {
+    color: var(--kuwaiba-terciary-color);
+    text-decoration: underline;
+}
+
+/* To be used in dynamic content, such as lists of things than can be chosen from, like 
+   lists of views in an Open View dialog */
+.link-like-label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Inherited styles */
+vaadin-radio-group {
+    padding: 0px;
+    margin: 0px;
+}
+
+vaadin-text-field vaadin-password-field {
+    font-size: 9pt;
+}
+
+vaadin-context-menu-item {
+    text-transform: none;
+    line-height: 5px;
+    padding: 5px 15px 5px 0px;
+}
+
+vaadin-menu-bar {
+    /**background-color: rgba(163, 211, 217, 0.5);**/
+}
+
+vaadin-button {
+    text-transform: none;
+    min-width: 30px;  
+}
+
+vaadin-tab {
+    text-transform: none;
+}
+/*remove margin in icon buttons with class icon-button*/
+.icon-button [part="prefix"] > iron-icon {
+    margin: 0px;
+}
+
+.icon-button iron-icon {
+    margin: 0px;
+}
+/*
+.vaadin-grid[part~="cell"] {
+    min-height: 20px;
+}*/
+
+.vaadin-dialog-overlay[part="content"] {
+    padding: 8px 24px;
+    min-width: 0;
+}
+
+/* Some styles applicable in error, login or logged-in pages*/
+.notification-info {
+    color: var(--kuwaiba-primary-color);
+}
+
+.notification-warn {
+    color: var(--kuwaiba-color-yellow);
+}
+
+.notification-error {
+    color: var(--kuwaiba-color-light_red);
+}
+
+.notification-title {
+    font-size: var(--lumo-font-size-l);
+    color: var(--kuwaiba-primary-color-dark);
+}
+
+.notification-buttons {
+    color: var(--kuwaiba-quintenary-color);            
+    font-size: var(--lumo-font-size-xxs);
+}
+
+.full-size-enhanced-dialog-content {
+    width: 100%;
+    height: 100%;
+}
+
+.navigation-button-selected {
+    background: var(--kuwaiba-primary-color);
+    color: var(--kuwaiba-secondary-text-color);
+    border-radius: 0px;
+}
+
+.navigation-button {
+    background: var(--kuwaiba-primary-color);
+    color: var(--kuwaiba-secondary-text-color);
+    border-radius: 0px;
+    opacity: 0.5;
+}
+
+.confirm-dialog-header{
+    font-size: 1.3em;
+}
+
+.confirm-dialog-footer{
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neotropic.kuwaiba</groupId>
+        <artifactId>core</artifactId>
+        <version>2.1</version>
+    </parent>
+    
+    <name>Containment Manager</name>
+    <description>Containment manager, allows creates special management hierarchy</description>
+    <version>2.1</version>
+    <artifactId>containmentman</artifactId>
+    <packaging>jar</packaging>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+    
+    <dependencies>
+        <!-- Core dependencies -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>internationalization</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.neotropic.util</groupId>
+            <artifactId>visual</artifactId>
+            <version>2.1</version>
+        </dependency>
+        
+         <!-- Vaadin -->
+       <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>integration-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>navigation</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--paper toogle button-->
+        <dependency>
+            <groupId>org.neotropic.flow.component</groupId>
+            <artifactId>paper-toggle-button-flow</artifactId>
+            <version>2.0</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <version>${vaadin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

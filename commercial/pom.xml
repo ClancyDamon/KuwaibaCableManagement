@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neotropic.kuwaiba</groupId>
+        <artifactId>kuwaiba-server</artifactId>
+        <version>2.1</version>
+    </parent>
+    
+    <name>Commercial Modules</name>
+    <description>Modules with licenses other than OSI approved</description>
+    <artifactId>commercial</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sdh</module>
+        <module>ipam</module>
+        <module>mpls</module>
+        <module>planning</module>
+        <module>ospman</module>
+        <module>whman</module>
+        <module>impact</module>
+        <module>synchronization</module>
+        <module>contractman</module>
+        <module>business-analytics</module>
+        <module>external-services</module>
+        <module>softman</module>
+        <module>procman</module>
+    </modules>
+</project>

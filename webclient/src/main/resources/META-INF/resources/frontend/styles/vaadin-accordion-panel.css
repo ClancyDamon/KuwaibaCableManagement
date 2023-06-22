@@ -1,0 +1,17 @@
+:host([opened]:not(:first-child)) {
+	margin-top: 1px;
+}
+
+::slotted(span) {
+    color: var(--kuwaiba-primary-text-color);
+}
+
+[part="toggle"] {
+    color: var(--kuwaiba-primary-text-color);
+}
+
+[part="summary"] {
+    background: #e7ebef;
+    padding: 10px;
+    font-size: small;
+}

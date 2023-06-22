@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.neotropic.kuwaiba</groupId>
+        <artifactId>kuwaiba-server</artifactId>
+        <version>2.1</version>
+    </parent>
+    
+    <name>Optional Modules</name>
+    <description>Collection of non-essential open source modules. They're not mandatory for Kuwaiba to work headlessly</description>
+    <artifactId>optional</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>serviceman</module>
+        <module>physical-connections</module>
+        <module>reports</module>
+        <module>topoman</module>
+        <module>taskman</module>
+        <module>layouteditor</module>
+        <module>contactman</module>
+        <module>pools</module>
+        <module>connectivity-manager</module>
+    </modules>
+</project>

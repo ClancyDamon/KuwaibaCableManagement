@@ -1,0 +1,21 @@
+This software makes use of the following third-party components and neither of them was modified, only linked:
+
+* Neo4J (3.5.5), Enterprise-grade graph database (GPLv3) http://www.neo4j.org
+* Groovy (3.0.1), Scripting language running on top of the JVM (APL) http://www.groovy-lang.org/
+* Spring Boot (2.3.2),Spring Boot is an open-source micro framework that provides Java developers with a platform to get started with configurable production-grade Spring applications. https://spring.io/projects/spring-boot
+* MxGraph (4.2.2), JavaScript diagramming library https://jgraph.github.io/mxgraph/
+* Ace (1.4.12) Ace is an embeddable code editor written in JavaScript https://ace.c9.io
+* Paper Swatch Picker (3.0.1), Simple material design color picker https://www.webcomponents.org/element/@polymer/paper-swatch-picker/demo/demo/index.html
+* Google Maps API (weekly), Maps JavaScript API https://developers.google.com/maps/documentation/javascript/overview
+* Paper Dialog (3.0.1), Dialog with Material Design styling https://www.webcomponents.org/element/@polymer/paper-dialog 
+* Vaadin (14.4.7), Web framework to build awesome Rich Internet Applications (APL2) https://vaadin.com/
+* JQuery (3.4.1), JavaScript library https://jquery.com/
+* PDFBox (2.0.24), A Java library to create and manipulate PDF files (APL2) https://pdfbox.apache.org/
+* Liera Sans, font https://fontlibrary.org/pt/font/liera-sans
+* Roboto, font https://fonts.google.com/specimen/Roboto
+* Lombok (1.18.22), A Java library to never write another getter or equals method again https://projectlombok.org/ 
+* ol (6.14.1), OpenLayers is a high-performance, feature-packed library for creating interactive maps on the web https://openlayers.org/
+
+We want to thank all people who made possible for this software to be available.
+
+All copyrights and trademarks associated to these third party components correspond to their owners. The Kuwaiba Project does not claim any ownership.

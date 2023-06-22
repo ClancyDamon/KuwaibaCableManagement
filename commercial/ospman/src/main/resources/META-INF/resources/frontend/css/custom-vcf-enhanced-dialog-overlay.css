@@ -1,0 +1,5 @@
+:host([theme~="wdw-osp-tool"]) [part="overlay"] {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+}

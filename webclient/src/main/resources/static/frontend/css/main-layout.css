@@ -1,0 +1,893 @@
+/* Power user interface layout */
+#main-layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#main-layout-header {
+    height: 50px;
+}
+
+#main-layout-content {
+    box-sizing: border-box;
+    height: 99%;
+    width: 99%;
+    padding: 0px;
+}
+
+#main-layout-footer {
+    max-height: 100px;
+    font-size: xx-small;
+    color: darkgray;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+/* To be used for buttons without any space around, like those used in property sheets to lauch detailed editors */
+.compact-button {
+    margin: 0px;
+    padding: 1px;
+}
+
+/* Widgets */
+/* Most dashboard with a cover component to be clicked to be activated have these properties  */
+.widgets-standard-cover {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.widgets-standard-cover-content {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: medium;
+    text-align: center;
+}
+
+.widgets-colors-magenta {
+    color: white;
+    background-color: #9850CE;
+}
+
+.widgets-colors-good-green {
+    color: white;
+    background-color: #5FC8A4;
+}
+
+/* To be applied in dialog with lists (a grid) inside   */
+.widgets-layout-dialog-list {
+   padding: 5px;
+   min-height: 350px;
+   min-width: 350px;
+}
+
+/* Individual components */
+.search-box-large {
+    width: 500px;
+    font-size: small;
+}
+
+.search-box-compact {
+    width: 200px;
+    font-size: xx-small;
+}
+
+.radio-button-filters-large {
+    width: 500px;
+}
+
+.radio-button-filters-compact {
+    width: 100px;
+    font-size: xx-small;
+}
+
+.embedded-notification-error {
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    color: red;
+    background-color: #FFA4A4;
+}
+
+.search-result-title {
+    text-align: left;
+}
+
+.search-result-actions {
+    margin-top: 0px;
+    color: #29AD1D;
+}
+
+.search-result-action-button {
+    padding: 0px;
+}
+/*First attempt to fix the buttons decorations in filters*/
+.action-button {
+    padding: 0px 5px 0px 5px;
+}
+/*First attempt to fix the buttons decorations used in filters, delete button*/
+.delete-action-button:hover {
+    background: var(--kuwaiba-quintenary-color);
+    color: #fafafa;
+}
+
+.save-action-button:hover {
+    background: var(--kuwaiba-secondary-color);
+    color: #fafafa;
+}
+
+/* Service Manager*/
+#serviceman-search-full {
+    max-height: 200px;
+    width: 100%;
+}
+
+#serviceman-quick-actions {
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1px;
+    margin: 1px;
+}
+
+/* Assign bolder style to some text */
+.bold-text {
+    font-weight: bolder;
+}
+
+.width30p {
+    width: 30%;
+}
+
+.width40p {
+    width: 40%;
+}
+
+.width50p {
+    width: 50%;
+}
+
+.width100p {
+    width: 100%;
+}
+
+.width100px {
+    width: 100px; 
+}
+
+.width200px {
+    width: 200px; 
+}
+
+.width300px {
+    width: 300px; 
+}
+.width400px {
+    width: 400px; 
+}
+
+.width500px {
+    width: 500px; 
+}
+/* Small, secondary-colored text used mainly for footers and image captions */
+.text-secondary {
+    color: #B3B0B0;
+    font-size: .8em;
+}
+
+.text-secondary-b {
+    color: #8A7C7C;
+    font-size: .9em;
+}
+
+a.text-secondary {
+    color: #88AA00;
+}
+
+/* To be used in dialogs so the text appears padded. Note that Label instances in Vaadin do not support setPadding or setMargin */ 
+.text-padded {
+    padding: 5px;
+}
+
+ /* used to align to end items in a flex container*/
+.align-self-end {
+    align-self: flex-end;
+}
+/* style to reset icon button properties without text*/
+.action-button-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.main-menu-icon-button {
+    height: 38px;
+}
+
+/* style to compact a little the grid rows */
+.grid-compact .vaadin-grid[part~="cell"] > vaadin-grid-cell-content {
+    padding: 2px;
+}
+
+paper-swatch-picker paper-icon-button {
+    border: 1px solid black;
+}
+/* label of section class icon */
+.lbl-icon-dmman {
+    width: 70px;
+}
+/* div used to wrap the class icon image */
+.div-icon-dmman {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.redColor {
+    color: red;
+}
+
+.purpleColor {
+    color: purple;
+}
+
+.lbl-accordion {
+    font-size: small;
+    font-weight: bold;
+    color: var(--lumo-primary-text-color);
+}
+
+/* vertical line */
+.vl {
+  border-left: 6px solid green;
+  height: 90%;
+}
+
+.primary-button {
+    background-color:var(--kuwaiba-primary-color-dark);
+    color: white;
+    font-weight: bold;
+    height: 32px;
+}
+/*Confirm dialog accpet button*/
+.confirm-button {
+    background-color:var(--kuwaiba-primary-color-dark);
+    color: white;
+    font-weight: bold;
+    height: 30px;
+}
+
+.confirm-button:disabled {
+    background-color:var(--kuwaiba-color-grey);
+    color: var(--kuwaiba-primary-text-color);
+}
+
+.confirm-button:active {
+    background-color:var(--kuwaiba-primary-color-dark);
+    color: white;
+    animation-duration: 1s;
+}
+
+.hintMplsView {
+    font-style: italic;
+    font-size: .9em;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll
+}
+
+/* Rack View */
+.lytInfoIcons {
+    margin-top: 30px;
+}
+.lytInfoIcons img {
+    height: 16px;
+    width: 16px;
+}
+
+.lytInfoIcons label {
+    font-size: 0.8em;
+}
+
+/* Report Module*/
+.scriptBox {
+    border: 1px lavender solid;
+    padding: 3px;
+    min-height: 400px;
+    max-height: 400px;
+}
+
+/*Navigation Parents path*/
+.parents-breadcrumbs{
+   display: flex;
+   justify-content: center;
+}
+/*Navigation creates the polygon divs as arrows for the parents*/
+.parent{
+    font-size: var(--lumo-font-size-s);
+    position: relative;
+    padding: 3px .9rem 3px 1.1rem;
+    margin-right: -12px;
+    color: var(--kuwaiba-secondary-text-color);
+    clip-path: polygon(0% 0% /*punta atras arriba*/
+        , calc(100% - 14px) 0% /*punta alta adelnte*/
+        , 100% 50% /*punta*/
+        , calc(100% - 14px) 100% /*punra baja adelante*/
+        , 0% 100% /*punta atras abajo*/
+        , 14px 50%); /*pucho de atras en medio*/
+}
+
+
+.parent-backward{
+    font-size: var(--lumo-font-size-s);
+    position: relative;
+    padding: 3px .9rem 3px 1.1rem;
+    margin-right: -8px;
+    color: var(--kuwaiba-secondary-text-color);
+    clip-path: polygon(10px 0% /*punta atras arriba*/
+        , 100% 0% /*punta alta adelante*/
+        , calc(100% - 10px) 50% /*punta*/
+        , 100% 100% /*punta baja adelante*/
+        , 10px 100% /*punta atras abajo**/
+        , 0% 50%); /*pucho de atras en medio*/
+}
+
+/*for search icon y search components*/
+.search-ico{
+    padding-right: 2px;
+}
+
+.search-ico:hover{
+    color: black;
+    height: 18px;
+    width: 18px;
+}
+
+.action-ico-add{
+    height: 16px;
+    width: 16px;
+}
+
+.action-ico-add:hover{
+    color: var(--kuwaiba-secondary-color);
+    height: 18px;
+    width: 18px;
+}
+
+.action-ico-del{
+    height: 16px;
+    width: 16px;
+}
+
+.action-ico-del:hover{
+    color: var(--kuwaiba-quintenary-color);
+    height: 18px;
+    width: 18px;
+}
+
+/*used instead of H4 to have full control of the padding*/
+.dialog-title{
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+/*usded to fix the default paper dialog style for search results*/
+.paper-dialog-fix-style{
+    max-height: 550px !important;
+    box-shadow: none;
+}
+/*used to reduce empty space in search results in navigation search*/
+.search-results-content{
+   margin-top: 12px !important;
+}
+
+.lbl-bold {
+    font-weight: bold;
+}
+
+/* For navigation acttions to remove actions*/
+.actions-menu-no-background{
+    background-color: transparent;
+}
+
+.sidebar_menu {
+  background-color: var(--kuwaiba-primary-color-dark);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex-direction: row;
+  height:40px;
+  min-width: 340px;
+  align-items: flex-start;
+}
+
+.sidebar_menu > vaadin-button {
+  margin: 2px;
+}
+
+.close {
+  width: 4px;  
+  border-radius: 5px;
+  height: auto;
+}
+
+.sub-menu {
+    background: var(--kuwaiba-primary-color-dark);
+    color: var(--kuwaiba-secondary-text-color);
+    border-top-right-radius: 5px;
+    min-height: 35px;
+}
+
+.sub-menu-element {
+    color:var(--kuwaiba-color-blue);
+    padding: 5px;
+    font-size: smaller;
+    cursor: default;
+    border-bottom: rgba(190, 190, 190, 0.3) solid 1px;
+}
+
+.sub-menu-element:hover {
+    background: var(--kuwaiba-color-light_yellow);
+    color:var(--kuwaiba-primary-text-color);
+}
+
+.compact-header {
+    box-sizing: border-box;
+    background-color: var(--kuwaiba-primary-color-dark);
+    padding-left: 10px;
+    color: var(--kuwaiba-secondary-text-color);
+}
+
+.img-logo {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height: 24px;
+}
+
+/* Containment Manager Module*/
+/*Possible children conntainer*/
+.possible_children_container {
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--lumo-border-radius, 0.1em);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Possible children visual component*/
+.possible_child {
+    box-sizing: border-box;
+    margin: 0.3em;
+    border: 1px solid #9E9E9E; /*#e5e5e5;*/
+    border-radius: var(--lumo-border-radius, 0.1em);
+    min-width: 100px;
+    height:30px;
+    width: auto;
+    padding: 5px;
+}
+
+.possible_abstract_children_container{
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--lumo-border-radius, 0.1em);
+    max-width: 425px;
+    margin: 0.3em;
+    display: flex;
+    flex-wrap: wrap;
+    min-height:30px;
+    justify-content: flex-start !important;
+    padding: 0px 5px 0 5px;
+}
+
+/*possible children visual component*/
+.possible_abstract_child{
+    box-sizing: border-box;
+    margin: 0.1em;
+    border: 1px solid #9E9E9E; /*#e5e5e5;*/
+    border-radius: var(--lumo-border-radius, 0.1em);
+    min-width: 100px;
+    height:25px;
+    width: auto;
+    padding: 5px;
+    background: #e7ebef;
+}
+
+/*possible children label*/
+.possible_children_label{
+    font-size: var(--lumo-font-size-m);
+}
+
+.abstract_possible_children_label{
+    font-style: italic; 
+    font-size: var(--lumo-font-size-m);
+    padding: 0px 10px 0 5px;
+}
+
+.possible_children_label_title{
+    padding-left: 0.6em;
+    font-size: var(--lumo-font-size-m);
+    font-style: italic;
+}
+
+.abstract_parent_hint{
+    font-size: var(--lumo-font-size-s);
+    font-style: italic;
+}
+/*possible children action button in the visual component*/
+.possible_children_action{
+    padding-right: 0.1em;
+    background: transparent;
+    height: 14px;
+    width: 14px;
+}
+.possible_children_action:hover{
+    color: var(--kuwaiba-quintenary-color);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.addto-favorites_action:hover{
+    color: var(--kuwaiba-quaternary-color);
+    height: 18px;
+    width: 18px;
+}
+
+.lbl-selected-subnetd{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.lbl-bold{
+    font-weight: bold;
+}
+
+.decription-box{
+    border: 1px solid #9E9E9E; /*#e5e5e5;*/
+    border-radius: var(--lumo-border-radius, 0.1em);
+    width: auto;
+}
+
+/*wrap the text when it is long*/
+.wrap-item-label {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+/****************************************IPAM**********************************/
+
+/*IP addresses in small boxes container*/
+.ipam-square {
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/*Ip address in small boxes*/
+.ipam-square > div {
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 10px;
+  line-height: 25px;
+  margin: 2px;
+  text-align: center;
+  width: 28px;
+  height: 22px;
+  border: 1px solid #9E9E9E;
+}
+
+.ipam-square > div:hover {
+   font-size: 14px;
+   cursor: default;
+}
+
+/*IPAM color of the parents of a selected item*/
+.ipam-parents-color{ background-color: var(--kuwaiba-primary-color); }
+/*Navigation color of the parents in navigation module, for location*/
+.location-parent-color{background-color: var(--kuwaiba-color-blue);}
+/*Navigation color of the parents in navigation module, for network device*/
+.device-parent-color{background-color: var(--kuwaiba-primary-color);}
+
+.ipam-selected_ipv{
+    background: rgba(158, 158, 158, 0.2);
+    border-left: 1px solid #9E9E9E;
+    border-top: 1px solid #9E9E9E;
+    border-right: 1px solid #9E9E9E;
+    padding: 1em;
+    border-radius: 2px 2px 0 0;
+}
+
+.ipam-unselected_ipv:hover{
+    background: rgba(158, 158, 158, 0.3);
+}
+
+.ipam-unselected_ipv{
+    border-bottom: 1px solid #9E9E9E;
+    padding: 1em;
+    border-radius: 2px 2px 0 0;
+}
+/*title of the property sheet*/ 
+.ipam-property-sheet-details {
+    margin-top: 0px;
+    font-size: var(--lumo-font-size-xxl);
+}
+
+/*IPAM States*/
+.busy {
+    background: #58ACFA;
+    color: var(--kuwaiba-secondary-text-color);
+}
+
+.not-created{
+    
+}
+
+.reserved{
+    background: var(--kuwaiba-color-grey);
+}
+
+.mngmnt{
+    background: var(--kuwaiba-primary-color-dark);
+    color: var(--kuwaiba-secondary-text-color);
+}
+
+.free{
+    background: rgba(140, 166, 45, 0.5);
+}
+/*******************************end of ipam************************************/
+
+/*****************************Service Manager**********************************/
+.serviceman-center-side {
+    padding: 0px 0px 0px 0px;
+}
+
+.serviceman-left-main-lyt {
+    padding: 0px 0px 0px 10px;
+}
+
+.serviceman-left-grid-lyt {
+    padding-top: 5px;
+}
+
+serviceman-center-header-lyt {
+    padding-top: 10px;
+}
+
+.serviceman-menu-button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;   
+    background-color: var(--_lumo-button-background-color, var(--lumo-contrast-5pct));
+    padding-left: calc(var(--lumo-button-size) / 4);
+    padding-right: calc(var(--lumo-button-size) / 4);
+}
+
+.serviceman-property-sheet-details-panel {
+    padding: 0px 10px 0px 0px;
+}
+
+.serviceman-paper-dialog-style {
+    width: 520px;
+    box-shadow: var(--shadow-elevation-16dp_-_box-shadow);
+}
+
+.serviceman-search-box-large {
+    width: 520px;
+    font-size: small;
+}
+
+.serviceman-search-icons {
+    font-size: 13px;
+}
+
+.serviceman-parents-breadcrumbs {
+   display: flex;
+   justify-content: flex-start;
+   padding: 0px 0px 5px 0px;
+   margin-top: 10px;
+}
+
+.serviceman-property-sheet-details-panel vaadin-accordion {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+/**/
+.serviceman-property-sheet-details {
+    white-space: nowrap;
+    margin-top: 15px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+/******************************end of service manager**************************/
+
+/*****************************Warehouses Manager**********************************/
+.whman-btn-new-spare-part {
+    width: 100%;
+    height: 38px;
+    margin-top: 15px;
+}
+
+.whman-lyt-actions-spare-pool {
+    margin-top: 5px;
+}
+
+.whman-lbl-no-warehouse {
+    margin-top: 10px;
+}
+
+.whman-properties-header {
+    margin-top: 7px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+/**************************end of Warehouses Manager******************************/
+
+/*********************************Contact Manager*********************************/
+.contactman-contact-actions-position {
+    margin-top: 15px;
+}
+
+.contactman-contact-property-sheet {
+    background-color: var(--kuwaiba-secondary-text-color);   
+    width: 100%;
+    min-height: 320px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.contactman-contact-resources-split {
+    width: 750px; 
+    height: 400px;
+}
+
+.contactman-lyt-contact-resources-grid {
+    padding: 0px 5px 0px 0px;
+    width: 36%;
+}
+
+.contactman-lyt-contact-resources-details {        
+    padding: 0px 0px 0px 6px;
+}
+/****************************end of Contact Manager********************************/
+
+/*********************************Proxy Manager*********************************/
+.proxies-lbl-no-pools {
+    margin-top: 10px;
+}
+/****************************end of Proxy Manager********************************/
+
+/*********************************Projects Module*********************************/
+.projects-lbl-no-pools {
+    margin-top: 10px;
+}
+/****************************end of Projects Module********************************/
+
+/*********************************Template Manager*********************************/
+.templates-left-header {
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+.templates-right-header {
+    white-space: nowrap;
+    margin-top: 10px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+.templates-properties-header {
+    margin-top: 26px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+/****************************end of Template Manager********************************/
+
+/*********************************Pools Module*********************************/
+.pools-right-header {
+    margin-top: 10px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+.pools-details-header {
+    margin-top: 28px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+
+.pools-lbl-no-pools {
+    margin-top: 10px;
+}
+/****************************end of Pools Module********************************/
+
+/*********************************Audit Trail**********************************/
+.audit-trail-main-header {
+    white-space: nowrap;
+    margin-top: 10px;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+/***************************end of Audit Trail*********************************/
+
+/*******************************Software Manager*******************************/
+.softman-license-property-sheet-header {
+    white-space: nowrap;
+    color: var(--kuwaiba-primary-text-color);
+    font-size: var(--lumo-font-size-xl);
+}
+/***************************end Software Manager*********************************/
+
+/*******************************Process Editor*********************************/
+.process-editor-artifact-icon-property {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;             
+}
+
+.process-editor-chx-enable {
+    margin-top: 10px;             
+}
+
+.process-editor-artifact-function-parameters {
+    background-color: var(--_lumo-button-primary-background-color, var(--lumo-primary-color));
+    color: var(--_lumo-button-primary-color, var(--lumo-primary-contrast-color));
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m); 
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.process-editor-artifact-function-variables {
+    color: var(--_lumo-button-color, var(--lumo-primary-text-color));
+    background-color: var(--_lumo-button-background-color, var(--lumo-contrast-5pct));
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m); 
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    min-width: 50px;
+}
+
+/***************************end Process Editor*********************************/
+
+/*debuging styles*/
+.lyt-a{
+    background: red;
+}
+
+.lyt-b{
+    background: blueviolet;
+}
+
+.lyt-c{
+    background: blue;
+}
+
+.lyt-d{
+    background: yellowgreen;
+}
+
+
+.lyt-f{
+    background: pink;
+}

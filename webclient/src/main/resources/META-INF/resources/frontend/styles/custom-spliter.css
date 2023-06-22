@@ -1,0 +1,10 @@
+
+/* change handle splitter width */
+[part="handle"] {
+    width: 20px;
+}
+/* reset the width and color of the vaadin splitter */
+[part="splitter"] {
+    min-width: 5px;
+    background-color: var(--material-split-layout-splitter-background-color, #c5c3c3);
+}

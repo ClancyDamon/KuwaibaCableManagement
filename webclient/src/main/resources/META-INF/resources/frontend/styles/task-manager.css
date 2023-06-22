@@ -1,0 +1,60 @@
+/** 
+@license
+Copyright 2010-2021 Neotropic SAS <contact@neotropic.co>.
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software 
+distributed under the License is distributed on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+See the License for the specific language governing permissions and 
+limitations under the License.
+*/
+/* 
+    Author     : Mauricio Ruiz {@literal <mauricio.ruiz@kuwaiba.org>}
+*/
+.success {
+    background-color: #A6F1A3;
+}
+
+.warning {
+    background-color: #FFE996;
+}
+
+.error {
+    background-color: #F1A3AC;
+}
+
+.task-result {
+    padding-left: 20px;
+}
+
+.task-header {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.properties-header {
+    margin-top: 2px;
+}
+
+.dialog-header {
+    margin-top: 2px;
+    margin-left: 30px;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.search {
+    margin-top: -10px;
+}
+
+[part~="cell"].text-result {
+    word-wrap: break-word;
+}
